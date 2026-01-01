@@ -13,13 +13,14 @@
 }
 
 .github-connect-modal {
-  background: var(--background-secondary);
-  border: 1px solid var(--border);
-  border-radius: 12px;
+  background: var(--background-card);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--border-light);
+  border-radius: 20px;
   padding: 40px;
   max-width: 500px;
   width: 90%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   animation: slideUp 0.3s ease;
 }
 
@@ -32,6 +33,7 @@
   font-size: 28px;
   color: var(--text-primary);
   margin: 0 0 8px 0;
+  font-weight: 700;
 }
 
 .modal-header p {
@@ -57,21 +59,29 @@
   gap: 16px;
   align-items: flex-start;
   padding: 16px;
-  background: var(--background-primary);
-  border-radius: 8px;
-  border: 1px solid var(--border);
+  background: var(--background-white);
+  border-radius: 12px;
+  border: 2px solid var(--border-light);
+  transition: all 0.2s;
+}
+
+.feature-item:hover {
+  border-color: var(--border-focus);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--hover-light);
 }
 
 .feature-icon {
   font-size: 32px;
   flex-shrink: 0;
-  color: var(--accent);
+  color: var(--primary-navy);
 }
 
 .feature-item h4 {
   font-size: 16px;
   color: var(--text-primary);
   margin: 0 0 4px 0;
+  font-weight: 600;
 }
 
 .feature-item p {
@@ -82,13 +92,13 @@
 }
 
 .error-message {
-  background: var(--primary-bright);
-  color: var(--accent);
+  background: var(--error-bg);
+  color: var(--error);
   padding: 12px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 13px;
   text-align: center;
-  border: 1px solid rgba(210, 193, 182, 0.3);
+  border: 1px solid var(--error);
 }
 
 .modal-actions {
@@ -100,10 +110,10 @@
 .btn-connect {
   width: 100%;
   padding: 14px;
-  background: linear-gradient(135deg, var(--primary-bright) 0%, var(--background-tertiary) 100%);
-  color: var(--accent);
+  background: var(--background-dark);
+  color: var(--text-white);
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -112,8 +122,8 @@
 
 .btn-connect:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(69, 104, 130, 0.4);
-  background: linear-gradient(135deg, var(--background-tertiary) 0%, var(--primary-bright) 100%);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+  background: #34495E;
 }
 
 .btn-connect:disabled {
@@ -126,17 +136,17 @@
   padding: 12px;
   background: transparent;
   color: var(--text-secondary);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  border: 2px solid var(--border-light);
+  border-radius: 10px;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .btn-skip:hover:not(:disabled) {
-  background: var(--background-primary);
+  background: var(--hover-yellow);
   color: var(--text-primary);
-  border-color: var(--primary-bright);
+  border-color: var(--border-focus);
 }
 
 .btn-skip:disabled {
